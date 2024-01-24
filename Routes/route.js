@@ -11,7 +11,7 @@ router.route('/login').post(auth.login)
 
 router.route('/post-blog').post( authenticate, blog.postBlog )
 
-router.route('/get-blog').get( authenticate, blog.getAllBlogs )
+router.route('/get-blog').get( blog.getAllBlogs )
 
 router.route('/get-blogs/:id').get( authenticate, blog.getBlogById )
 
